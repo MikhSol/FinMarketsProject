@@ -1,0 +1,14 @@
+Ticker of 1st asset
+UNH.Adjusted
+Ticker of 2nd asset
+JPM.Adjusted
+Expected returns of 1st asset
+-0.000638089239766959
+Expected returns of 2nd asset
+5.77165869119956e-06
+Expected returns of portfolio
+-0.000632317581075759
+Variance of portfolio
+0.0374172897069916
+Sharp Ratio
+-0.00613812912115003

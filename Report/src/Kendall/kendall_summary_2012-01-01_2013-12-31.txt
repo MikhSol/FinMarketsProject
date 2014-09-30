@@ -1,0 +1,14 @@
+Ticker of 1st asset
+VZ.Adjusted
+Ticker of 2nd asset
+CSCO.Adjusted
+Expected returns of 1st asset
+0.000293187145014329
+Expected returns of 2nd asset
+0.000263487580721849
+Expected returns of portfolio
+0.000556674725736178
+Variance of portfolio
+0.00987065936324502
+Sharp Ratio
+-0.00429277984274236

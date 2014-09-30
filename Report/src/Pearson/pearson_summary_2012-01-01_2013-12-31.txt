@@ -1,0 +1,14 @@
+Ticker of 1st asset
+WMT.Adjusted
+Ticker of 2nd asset
+CSCO.Adjusted
+Expected returns of 1st asset
+0.000322470697569341
+Expected returns of 2nd asset
+0.000263487580721849
+Expected returns of portfolio
+0.00058595827829119
+Variance of portfolio
+0.00956599419389414
+Sharp Ratio
+-0.00429314231357339

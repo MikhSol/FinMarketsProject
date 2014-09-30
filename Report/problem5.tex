@@ -1,0 +1,68 @@
+\newpage \clearpage
+\section{Problem \#5}
+\label{sec:prob5}
+
+\subsection{Task}
+For the 30 stocks that constitute the Dow Jones Industrial Average (Yahoo: DJIA) at the present day, find (a) the stock with the maximum P/E ratio, (b) the stock with the minimum P/E ratio and (c) the stock, which P/E ratio is the closest to the average value among all 30 components. Calculate annual returns, annual volatility, daily VaR and daily ES (using historical simulation method) for these stocks for the periods of 2010---2012 and 2005---2007. Calculate correlations between these 3 stocks in both of periods.
+
+\subsection{Problem description}
+
+\paragraph*{The price-to-earnings ratio, or P/E ratio} --- an equity valuation multiple. It is defined as market priceper share divided by annual earnings per share.
+    There are multiple versions of the P/E ratio, depending on whether earnings are projected or realized, and the type of earnings.
+\begin{itemize}
+	\item{\textbf{"Trailing P/E"} uses net income for the most recent 12 month period, divided by the weighted average number of common shares in issue during the period. This is the most common meaning of "P/E" if no other qualifier is specified. Monthly earnings data for individual companies are not available, and in any case usually fluctuate seasonally, so the previous four quarterly earnings reports are used and earnings per share are updated quarterly. Note, each company chooses its own financial year so the timing of updates varies from one to another.}
+	\item{\textbf{"Trailing P/E from continued operations"} uses operating earnings, which exclude earnings from discontinued operations, extraordinary items (e.g. one-off windfalls and write-downs), and accounting changes.}
+	\item{\textbf{"Forward P/E"}: Instead of net income, this uses estimated net earnings over next 12 months. Estimates are typically derived as the mean of those published by a select group of analysts (selection criteria are rarely cited) ~\cite{Sel6}.}
+\end{itemize}
+
+\paragraph*{Annual Return} --- the return an investment provides over a period of time, expressed as a time-weighted annual percentage. Sources of returns can include dividends, returns of capital and capital appreciation. The rate of annual return is measured against the initial amount of the investment and represents a geometric mean rather than a simple arithmetic mean. 
+
+    Annual return is the de facto method for comparing the performance of investments with liquidity, which includes stocks, bonds, funds, commodities and some types of derivatives. Different asset classes are considered to have different strata of annual returns ~\cite{Sel6}.
+
+\paragraph*{Volatility} --- a measure for variation of price of a financial instrument over time. Historic volatility is derived from time series of past market prices. An implied volatility is derived from the market price of a market traded derivative (in particular an option). The symbol $\sigma$ is used for volatility, and corresponds to standard deviation, which should not be confused with the similarly named variance, which is instead the square, $\sigma^2$.The annualized volatility $\sigma$ is the standard deviation of the instrument's yearly logarithmic returns.
+    The generalized volatility $\sigma T$ for time horizon $T$ in years is expressed as ~\cite{Sel8}:
+\begin{equation}
+\sigma_T = \sigma \sqrt{T}
+\end{equation}
+ 
+\paragraph*{Value at risk (VaR)} --- a widely used risk measure of the risk of loss on a specific portfolio of financial assets. For a given portfolio, probability and time horizon, VaR is defined as a threshold value such that the probability that the mark-to-market loss on the portfolio over the given time horizon exceeds this value (assuming normal markets and no trading in the portfolio) is the given probability level ~\cite{Sel9}.
+
+\paragraph*{Expected shortfall (ES)} --- a risk measure, a concept used in finance (and more specifically in the field of financial risk measurement) to evaluate themarket risk or credit risk of a portfolio. It is an alternative to value at risk that is more sensitive to the shape of the loss distribution in the tail of the distribution. The "expected shortfall at q\% level" is the expected return on the portfolio in the worst  \% of the cases.
+    Expected shortfall is also called conditional value at risk (CVaR), average value at risk (AVaR), and expected tail loss (ETL).
+ES evaluates the value (or risk) of an investment in a conservative way, focusing on the less profitable outcomes. For high values of q it ignores the most profitable but unlikely possibilities, for small values of q it focuses on the worst losses. On the other hand, unlike the discounted maximum loss even for lower values of q expected shortfall does not consider only the single most catastrophic outcome. A value of q often used in practice is 5\%.
+    Expected shortfall is a coherent, and moreover a spectral, measure of financial portfolio risk. It requires a quantile-level  q, and is defined to be the expected loss of portfolio value given that a loss is occurring at or below the  q-quantile ~\cite{Sel10}.
+
+
+\subsection{Solution}
+
+\subsection{Results}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

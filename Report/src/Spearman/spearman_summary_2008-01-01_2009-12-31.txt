@@ -1,0 +1,14 @@
+Ticker of 1st asset
+VZ.Adjusted
+Ticker of 2nd asset
+UNH.Adjusted
+Expected returns of 1st asset
+-0.000160429278348509
+Expected returns of 2nd asset
+-0.000638089239766959
+Expected returns of portfolio
+-0.000798518518115467
+Variance of portfolio
+0.0256610652944741
+Sharp Ratio
+-0.00923871752807102

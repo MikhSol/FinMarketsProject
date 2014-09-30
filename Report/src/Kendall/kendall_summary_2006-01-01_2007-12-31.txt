@@ -1,0 +1,14 @@
+Ticker of 1st asset
+XOM.Adjusted
+Ticker of 2nd asset
+UNH.Adjusted
+Expected returns of 1st asset
+0.000506110542258715
+Expected returns of 2nd asset
+-5.75709763849133e-05
+Expected returns of portfolio
+0.000448539565873802
+Variance of portfolio
+0.010744279221143
+Sharp Ratio
+-0.0483176856259092

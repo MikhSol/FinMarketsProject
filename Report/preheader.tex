@@ -1,0 +1,202 @@
+\documentclass[a4paper,14pt, oneside]{extarticle} 
+%\documentclass[a4paper,14pt,oneside]{scrartcl} % KOMA-Script
+%\documentclass[a4paper,12pt,draft]{scrartcl} % KOMA-Script. Черновая копия
+%\documentclass[a5paper,14pt,oneside]{scrartcl} % KOMA-Script
+%documentclass[a4paper,12pt,oneside]{ncc} % ncc
+%\documentclass[12pt]{extarticle}
+\usepackage{cmap}                     % Поддержка поиска русских слов в PDF (pdflatex), ЗАГРУЖАТЬ САМЫМ ПЕРВЫМ!
+\usepackage[unicode=true]{hyperref} % гиперрсылки. в том числе имим становятся обычные ссылки и оглавления.
+%\usepackage[a4paper,top=5mm,bottom=5mm,left=5mm,right=5mm]{geometry} % меняет размеры прямо в процессе загрузки стилевого файла
+% КФТТ стандарт для оформления курсовых
+%\usepackage[a4paper,top=25mm,bottom=25mm,left=30mm,right=15mm]{geometry} % меняет размеры прямо в процессе загрузки стилевого файла
+\usepackage[a4paper,height=25cm,hmargin={3cm,1.5cm},vmargin={2.5cm,2.5cm}]{geometry} % меняет размеры прямо в процессе
+%\usepackage{geometry}
+%\geometry{left=3cm}% левое поле
+%\geometry{right=1.5cm}% правое поле
+%\geometry{top=2.5cm}% верхнее поле
+%\geometry{bottom=2.5cm}% нижнее поле
+\usepackage{mathtext}                 % Поддержка кириллицы в математическом режиме. ЗАГРУЖАТЬ ДО fontenc
+%\usepackage[warn]{mathtext}          % замена предыдущему, только выводятся предупреждения об кириллице в формулах     
+\usepackage[T2A]{fontenc}          % для использования русской раскладки необходимо
+\usepackage[koi8-r,cp1251]{inputenc}         % набить данные три строчки
+\usepackage[english]{babel}   % может быть использована и другая кодировка cp866 вместо cp1251
+%\renewcommand{\theenumi}{\asbuk{enumi}} % чтобы enumerate русские буквы в перечнях использовал на верхнем уровне
+\usepackage{amsmath,amssymb, amsxtra}
+\usepackage{nccmath}                  % расширяет пакет amsmath
+\usepackage{epsfig}                   % все остальные пакеты использую для корректной вставки графики
+\usepackage{graphicx}                 % и т.п.
+%\usepackage{graphics}
+\usepackage{nccfloats}
+\usepackage{color}
+\usepackage{cite}    % позволяет выводить списки не [1, 2, 3], а [1-10]
+%\usepackage{caption2}                % чтобы в подрисуночной подписи
+%\renewcommand{\captionlabeldelim}{.} % ... после слова рис. ставилась точка
+%\usepackage[font=small,labelfont=bf]{caption} 
+
+% Редактируем стиль заголовков таблиц и рисунков
+% nooneline --- чтобы сработало raggedright
+\usepackage[format=plain, labelsep=period, labelfont=bf, textfont=small]{caption} 
+%\captionsetup[table]{name=Табл.}
+%\captionsetup[figure]{justification=centering}
+
+%\usepackage{ccaption} % другой способ, чтобы в подрисуночной подписи
+%\captiondelim{. }     % ...  после слова рис. ставилась точка
+%\captionnamefont{\bf}
+%\captiontitlefont{\small}
+
+%Включаем символы Upgreek
+\usepackage{upgreek}
+\usepackage{afterpage}
+\usepackage{placeins}
+
+
+
+\usepackage{indentfirst} % Красная строка в первом абзаце 
+%\usepackage[misccorr]
+\usepackage[shortcuts,cyremdash]{extdash} % переносы в составных словах, дефисы и тире (из ncc-tools)
+\usepackage[thinc,italic]{esdiff} % упрощает написание частных и прочих производных. Без italic d не будет курсивом
+%\usepackage{commath} % почти тоже самое
+\usepackage{shadow} % боксы красивые
+\usepackage{xtab} % таблицы,с возможностью разбиения на страницы,с возможностью подстрчного примечания на каждой странице с таблицей
+%\usepackage{enumerate} % расширение возможностей перечней
+\usepackage{lscape}    % меняем ориентацию текста на 90 град...
+\usepackage{pdflscape} % ... для этого необходимый текс помещаем в окружение landscape (например, таблтицу)
+\usepackage{ncccomma} % используя этот пакет, запятая в 3,14 будет считать разделителем разрядов, а не десятков
+\usepackage{mathrsfs} % чтобы писать всякие гамильтонианы
+%\usepackage{dsfont} % \mathds
+\usepackage{yfonts} % готика в математическом режиме
+\usepackage[integrals]{wasysym} % чтобы интегралы были прямыми как в русском стиле
+\usepackage{multirow} % ячейка на несколько строк
+\usepackage[stable,perpage]{footmisc} % подстрочные примечания. с опцией perpage нумерация сносок при переходе на новую страницу опять начинается с единицы
+% stable -- http://www.tex.ac.uk/cgi-bin/texfaq2html?label=ftnsect -- чтобы можно было использовать сноски в заголовках
+\usepackage{prettyref} % пакет позволяет внешний вид ссылки в зависимости от префикса. к примеру, \newrefformat{eq}{формула \No~\ref{#1}}. Тогда на выходе получим \prettyref{eq:1} -> формула № 1.
+\newrefformat{eq}{(\ref{#1})}
+\newrefformat{fig}{fig.\,\ref{#1}}
+\newrefformat{tab}{tab.\,\ref{#1}}
+\newrefformat{sec}{п.\,\ref{#1}}
+\newrefformat{ch}{гл.\,\ref{#1}}
+\newcommand{\pref}[1]{\prettyref{#1}}
+% размеры страницы
+%\textwidth 165mm\textheight 245mm %
+%\hoffset 0mm \voffset -20mm
+%\marginparwidth 20mm
+\usepackage{cancel}
+
+\usepackage{multicol} % в пакете есть окружение multicols, которое позволяет создавать несколько колонок
+
+\usepackage{array} % чтобы выровнять по центру колонку в таблице, у которой размер высчитывается вручную: >{\centering}p{1cm} или >{\centering}m{1cm} 
+
+\usepackage{wrapfig}  % плавающие объекты
+%\usepackage{floatflt} % 
+\usepackage{soul} % различные способы выделения текста (soul.pdf)
+
+\usepackage[inline]{fixme} % пакет с командами-заметками в черновой копии см класс с draft
+% опции
+% inline   -- разместить прямо в тексте
+% margin   -- разместить на полях (умолчание)
+% footnote -- как подстрочное примечание
+% index    -- в алфавитном указателе
+% команды
+% \fxnote    -- заметка
+% \fxwarning -- предупреждение
+% \fxerror   -- не фатальная ошибка
+% \fixme     -- требование для обязательного исправления
+
+%\usepackage{ulem}
+\usepackage{setspace}
+\onehalfspacing % полуторный интервал для всего текста
+
+\usepackage{cases} % содержит окружение numcases для сохдания условных конструкций
+
+\setlength{\parindent}{1.0cm} % отступ абзаца
+\usepackage{itemsep}
+\noitemsep
+
+% МОИ КОМАНДЫ
+\renewcommand{\Re}{\text{Re}} % чтобы отображались действительня и комплексная 
+\renewcommand{\Im}{\text{Im}} % части по русской традиции
+
+\newcommand{\note}{\noindent $\RHD$ \textsc{Примечание.~}} % Примечание
+
+% символ порядка величины
+\newcommand{\ord}[1]{^{(#1)}}
+
+\newcommand{\const}{\text{const}}
+% текст,который не знаю, что означает
+\newcommand{\notknow}[1]{\textcolor{red}{#1}}
+
+% перенос формул в тексте (рецепт Евгения Миньковского)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\newcommand{\ham}{\mathcal{H}} % гамильтониан
+\newcommand{\lag}{\mathscr{L}} % лагранжиан
+\newcommand{\energy}{\mathcal{E}} % энергия
+\newcommand{\degC}{\textdegree{}C} % Градусы Цельсия
+\newcommand{\degK}{\textdegree{}K} % Градусы Кельвина
+\newcommand{\elfield}{\mathscr{E}} % электрическое поле
+\newcommand{\realZ}{\mathbb{Z}} % действительные числа
+\newcommand{\realR}{\mathbb{R}} % действительные числа
+\newcommand{\natur}{\mathbb{N}} % наутральные числа
+
+%Включение–выключение нумерации страниц в LaTeX делается вот так:
+%\pagestyle{empty} % нумерация выкл.
+%\pagestyle{plain} % нумерация вкл.
+
+%\bibliographystyle{gost71u} % несортированный стиль библиографии (номера - в порядке упоминания в тексте), ГОСТ
+\bibliographystyle{gost705}
+
+\usepackage{pdfpages} % insert pages of external PDF documents. See reference
+%\fontsize{12}{14pt}\fontfamily{cmr}\selectfont
+
+\usepackage{xr} % The LaTeX package xr makes it possible to create references to labels defined in external documents. 
+
+% Счетчики в границах section
+% сбросить счетчик формул/картинок/таблиц в начале каждого раздела
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+% Счетчик (sec number).(eq number)
+\makeatletter
+\@addtoreset{equation}{section}
+\@addtoreset{figure}{section}
+\@addtoreset{table}{section}
+\makeatother 
+
+% Список сокращений
+% в месте где будет располагаться список сокращений в теле документа
+% \printnomenclature
+% само сокращение, обычно вводится в том месте, где оно впервые употребляется
+% \nomenclature{НИИ ЧаВо}{НИИ ЧАродейства и ВОлшебства}
+% после чего необходимо скомпилировать документ
+% в основной директории должен появится файл с расширением .glo
+% затем сделать так
+% makeindex glossary.nlo -s nomencl.ist -o glossary.nls
+
+
+\usepackage[english,intoc]{nomencl} % intoc для включения в TOC
+% не надо больших промежутков между сокращениями по вертикали
+\setlength{\nomitemsep}{-\parsep}
+\makenomenclature
+\renewcommand{\nomname}{Список сокращений}
+
+
+%% http://mydebianblog.blogspot.com/2008/11/latex.html
+%% Меняем перечисления на формат цифра.цифра
+%\renewcommand{\theenumi}{\arabic{enumi}}% Меняем везде перечисления на цифра.цифра
+%\renewcommand{\labelenumi}{\arabic{enumi}}% Меняем везде перечисления на цифра.цифра
+%\renewcommand{\theenumii}{.\arabic{enumii}}% Меняем везде перечисления на цифра.цифра
+%\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}.}% Меняем везде перечисления на цифра.цифра
+%\renewcommand{\theenumiii}{.\arabic{enumiii}}% Меняем везде перечисления на цифра.цифра
+%\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.}% Меняем везде перечисления на цифра.цифра
+
+% сноски в таблице
+% http://dound.com/2009/06/latex-adding-footnotes-in-tables-or-other-floats/
+%\usepackage{fmtcount}
+%\usepackage{ctable}
+
+% Для добавления бибилиографического списка и index в TOC, если они больше одной страницы
+% http://www.tex.ac.uk/cgi-bin/texfaq2html?label=tocbibind
+\usepackage[section,nottoc,notlot,notlof]{tocbibind}
+\setindexname{Список сокращений}
+\settocbibname{References}

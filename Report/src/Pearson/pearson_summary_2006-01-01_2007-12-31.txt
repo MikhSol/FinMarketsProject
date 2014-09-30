@@ -1,0 +1,14 @@
+Ticker of 1st asset
+UNH.Adjusted
+Ticker of 2nd asset
+CSCO.Adjusted
+Expected returns of 1st asset
+-5.75709763849133e-05
+Expected returns of 2nd asset
+0.000438036968239226
+Expected returns of portfolio
+0.000380465991854312
+Variance of portfolio
+0.0120012857262273
+Sharp Ratio
+-0.0435095835217071

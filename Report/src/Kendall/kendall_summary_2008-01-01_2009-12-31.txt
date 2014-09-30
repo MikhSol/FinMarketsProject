@@ -1,0 +1,14 @@
+Ticker of 1st asset
+WMT.Adjusted
+Ticker of 2nd asset
+UNH.Adjusted
+Expected returns of 1st asset
+0.000154489224365128
+Expected returns of 2nd asset
+-0.000638089239766959
+Expected returns of portfolio
+-0.00048360001540183
+Variance of portfolio
+0.0241932236784195
+Sharp Ratio
+-0.00921943068303259

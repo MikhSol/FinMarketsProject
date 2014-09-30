@@ -1,0 +1,53 @@
+\input{preheader}
+\externaldocument[titlepage-]{titlepage}
+
+% First, you have to redefine \figurename. Without using the babel package:
+% \renewcommand*{\figurename}{Fig.}
+% With babel (and English as language):
+% \addto\captionsenglish{\renewcommand*{\figurename}{Fig.}}
+%\addto\captionsrussian{\renewcommand*{\figurename}{Рис.}}
+%\addto\captionsrussian{\renewcommand*{\tablename}{Табл.}}
+
+
+% BEGIN DOCUMENT 
+\begin{document}
+
+\newpage \clearpage
+\input{titlepage}% это титульный лист
+
+\setcounter{page}{2} % нумерация со второй страницы
+\setcounter{tocdepth}{2} % ограничим уровень отображения информации в оглавлении до 2го уровня включительно
+
+% Использование \subsubsubsection как в KOMA-Script
+% http://pleasemakeanote.blogspot.com/2010/06/how-to-activate-subsubsubsection-in.html-
+%\renewcommand{\paragraph}{\subsubsubsection}
+\setcounter{secnumdepth}{5}
+
+\tableofcontents{} % это оглавление, которое генерируется автоматически
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 3
+\include{problem3}
+
+% Problem 4
+\include{problem4}
+
+% Problem 5
+\include{problem5}
+
+%References
+\include{references}
+
+
+%\newpage \clearpage
+%\printnomenclature[2cm]
+%\label{sec:nomencl}
+%\addcontentsline{toc}{section}{Список сокращений}
+
+%\newpage \clearpage
+%\bibliography{literature,my-articles}
+%\label{sec:bibl}
+%\addcontentsline{toc}{section}{Список литературы}
+
+% END DOCUMENT
+\end{document}
